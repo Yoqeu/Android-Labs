@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+}
+
+def getVersionCode = { ->
+    try {
+        def code = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list','tag','--list', '--first-parent', '--count', 'HEAD'
+            standardOutput = code
+        }
+        return Integer.parseInt(code.toString().trim())
+    }
+    catch (ignored) {
+        return 1;
+    }
+}
+
+def getVersionName = { ->
+    try {
+        def code = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'describe', '--tags','--long'
+            standardOutput = code
+        }
+        return code.toString().trim()
+    }
+    catch (ignored) {
+        return null;
+    }
+}
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.example.tabatatimer"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode getVersionCode()
+        versionName getVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.jaredrummler:colorpicker:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:textColor="#000000"
+        app:title="@string/Design">
+    <SwitchPreferenceCompat
+        app:key="night_mode_preference_key"
+        app:title="@string/NightMode"
+        />
+        <ListPreference
+            android:defaultValue="false"
+            android:key="set_language_preference"
+            android:title="@string/Language"
+            android:entries="@array/Languages"
+            android:entryValues="@array/SetValues"
+            />
+        <ListPreference
+            android:defaultValue="false"
+            android:key="font_preference"
+            android:entries="@array/FontSize"
+            android:entryValues="@array/SetValues"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/Font" />
+
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TabataTimer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Add">Add</string>
+    <string name="Title">Title</string>
+    <string name="Prep">Preparation</string>
+    <string name="Work">Working</string>
+    <string name="Rest">Rest</string>
+    <string name="Cycles">Cycles</string>
+    <string name="Sets">Sets</string>
+    <string name="SetsRest">Rest between sets</string>
+    <string name="Finish">Finish</string>
+    <string name="Font">Font size</string>
+    <string name="NightMode">Mode(light/dark)</string>
+    <string name="popup1">Edit</string>
+    <string name="popup2">Delete</string>
+    <string name="MsgTitle">Leaving</string>
+    <string name="Language">Language</string>
+    <string name="Color">Change Color</string>
+    <string name="Msg">Do you really want to leave?</string>
+    <string name="MsgBtnPos">Yes</string>
+    <string name="MsgBtnNeg">No</string>
+    <string name="Settings">Settings</string>
+</resources>
