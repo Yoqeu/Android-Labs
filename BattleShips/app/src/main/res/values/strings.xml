@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">BattleShips</string>
+    <string name="app_uuid">d3913c42–6128-4427-9674-6374f2690ebf</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="IdToken">338887998720-q7qnl06aa0tol01ktel0g40e4pcr0v19.apps.googleusercontent.com</string>
+
+    <!-- Deployment Activity -->
+    <string name="deployment_options">Deployment Options</string>
+    <string name="deployment_reset">Reset</string>
+    <string name="deployment_rotation_mode">Rotation Mode</string>
+    <string name="deployment_remaining_ships">Remaining ships to deploy:</string>
+    <string name="deployment_all_ships">All ships deployed!</string>
+    <string name="deployment_deploy">Deploy</string>
+    <string name="deployment_intent_board">Board</string>
+
+    <!-- Game Activity -->
+    <string name="game_own_board">Deployed Troops</string>
+    <string name="game_opponent_board">Find The Enemy Ships!</string>
+    <string name="game_turn">Turn:</string>
+    <string name="game_turn_player">Yours</string>
+
+    <string name="game_exit_title">Confirmation</string>
+    <string name="game_exit_message">Are you sure you want to exit the game and go to the main menu?</string>
+
+    <string name="game_won">You won the game!</string>
+    <string name="game_lost">You lost the game!</string>
+
+    <string name="game_gameover_title">Gameover!</string>
+    <string name="Play">Create new game</string>
+    <string name="Find">Find existing</string>
+    <string name="Account">Account</string>
+    <string name="Statistics">Statistics</string>
+    <string name="SignOut">Sign out</string>
+    <string name="Id">Id:</string>
+    <string name="Name">Name:</string>
+    <string name="Email">E-mail:</string>
+    <string name="MsgEdit">Enter new name:</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="OR">OR</string>
+    <string name="ChangePhoto">Change</string>
+    <string name="Gravatar">Gravatar</string>
+    <string name="Profile">Profile</string>
+
+    <!-- Game Activity Menu -->
+    <string name="game_menu_sound">Sound</string>
+</resources>
